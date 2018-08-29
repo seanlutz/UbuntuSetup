@@ -13,6 +13,7 @@ bash miniconda.sh -b -p $HOME/miniconda
 rm miniconda.sh
 echo PATH=~/miniconda/bin/:$PATH >> ~/.bashrc
 PATH=~/miniconda/bin/:$PATH
+pip install mypy
 conda install -y flask scikit-learn beautifulsoup4 bokeh
 
 
