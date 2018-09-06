@@ -25,7 +25,7 @@ rm miniconda.sh
 echo PATH=~/installed/miniconda/bin/:$PATH >> ~/.bashrc
 PATH=~/installed/miniconda/bin/:$PATH
 python -m pip install mypy
-conda install -y flask scikit-learn beautifulsoup4 bokeh
+conda install -y flask scikit-learn beautifulsoup4 bokeh jupyter
 
 
 # Docker
@@ -56,5 +56,11 @@ sudo apt-get install snapd
 snap install spotify
 
 # Android Studio
+wget https://dl.google.com/dl/android/studio/ide-zips/3.1.4.0/android-studio-ide-173.4907809-linux.zip
+unzip android-studio-ide-173.4907809-linux.zip
+mv android-studio installed/
+rm android-studio-ide-173.4907809-linux.zip
+$ ./installed/android-studio/bin/studio.sh &
+
 
 # Eclipse
