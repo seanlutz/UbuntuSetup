@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # Directories
-cd ~
-mkdir -p installed/customGitConfig/bin projects school stuff
-mv save installed/customGitConfig/bin
-chmod +x installed/customGitConfig/bin/save
+mkdir -p ~/installed/customGitConfig/bin ~/projects ~/school ~/stuff
+mv save ~/installed/customGitConfig/bin
+mv UbuntuSetup ~/projects
+chmod +x ~/installed/customGitConfig/bin/save
 echo PATH=~/installed/customGitConfig/bin/:$PATH >> ~/.bashrc
+cd ~
 
 
 # Random Software
@@ -61,6 +62,3 @@ unzip android-studio-ide-173.4907809-linux.zip
 mv android-studio installed/
 rm android-studio-ide-173.4907809-linux.zip
 $ ./installed/android-studio/bin/studio.sh &
-
-
-# Eclipse
