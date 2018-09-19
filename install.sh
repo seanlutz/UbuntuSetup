@@ -2,10 +2,11 @@
 
 # Directories
 mkdir -p ~/installed/customGitConfig/bin ~/projects ~/school ~/stuff
-mv save ~/installed/customGitConfig/bin
+mv save ~/installed/bin
+mv laboratory ~/installed/bin
+chmod +x ~/installed/bin/save  ~/installed/laboratory
+echo PATH=~/installed/bin:$PATH >> ~/.bashrc
 mv UbuntuSetup ~/projects
-chmod +x ~/installed/customGitConfig/bin/save
-echo PATH=~/installed/customGitConfig/bin/:$PATH >> ~/.bashrc
 cd ~
 
 
