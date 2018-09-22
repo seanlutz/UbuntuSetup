@@ -12,7 +12,7 @@ cd ~
 
 # Random Software
 sudo apt-get update
-sudo apt-get install -y wget nano apt-transport-https ca-certificates curl software-properties-common git
+sudo apt-get install -y wget nano apt-transport-https ca-certificates curl software-properties-common git nim
 
 # VS Code
 wget -O install.deb https://go.microsoft.com/fwlink/?LinkID=760868 
