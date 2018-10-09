@@ -4,10 +4,10 @@
 mkdir -p ~/installed/customGitConfig/bin ~/installed/bin ~/projects ~/school ~/stuff
 mv save ~/installed/bin
 mv laboratory ~/installed/bin
-chmod +x ~/installed/bin/save  ~/installed/laboratory
+chmod +x ~/installed/bin/save  ~/installed/bin/laboratory
 echo PATH=~/installed/bin:$PATH >> ~/.bashrc
-mv UbuntuSetup ~/projects
-cd ~
+mv ~/UbuntuSetup ~/projects
+cd
 
 
 # Random Software
@@ -27,7 +27,7 @@ rm miniconda.sh
 echo PATH=~/installed/miniconda/bin/:$PATH >> ~/.bashrc
 PATH=~/installed/miniconda/bin/:$PATH
 python -m pip install mypy
-conda install -y flask scikit-learn beautifulsoup4 bokeh jupyter
+conda install -y flask scikit-learn beautifulsoup4 bokeh jupyterlab
 
 
 # Docker
@@ -35,7 +35,7 @@ sudo apt-get install apt-transport-https ca-certificates curl software-propertie
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
 sudo apt-get update
-sudo apt-get install -f docker-ce
+sudo apt-get install -f -y docker-ce
 
 # Node ;(
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
@@ -43,15 +43,14 @@ sudo apt-get install -y nodejs
 
 # Golang
 wget -O go.tar.gz https://dl.google.com/go/go1.11.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go.tar.gz
-echo PATH=$PATH:/usr/local/go/bin >> ~/.bashrc
+sudo tar -C ~/installed/bin -xzf go.tar.gz
 rm go.tar.gz
 
 # Sublime
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
-sudo apt-get install sublime-text
+sudo apt-get install -y -f sublime-text
 
 # Spotify
 sudo apt-get install snapd
