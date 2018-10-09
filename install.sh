@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directories
-mkdir -p ~/installed/customGitConfig/bin ~/projects ~/school ~/stuff
+mkdir -p ~/installed/customGitConfig/bin ~/installed/bin ~/projects ~/school ~/stuff
 mv save ~/installed/bin
 mv laboratory ~/installed/bin
 chmod +x ~/installed/bin/save  ~/installed/laboratory
@@ -62,7 +62,6 @@ wget https://dl.google.com/dl/android/studio/ide-zips/3.1.4.0/android-studio-ide
 unzip android-studio-ide-173.4907809-linux.zip
 mv android-studio installed/
 rm android-studio-ide-173.4907809-linux.zip
-$ ./installed/android-studio/bin/studio.sh &
 
 # java
 wget -O java.tar.gz http://javadl.oracle.com/webapps/download/AutoDL?BundleId=234464_96a7b8442fe848ef90c96a2fad6ed6d1
