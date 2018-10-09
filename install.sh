@@ -12,7 +12,7 @@ cd ~
 
 # Random Software
 sudo apt-get update
-sudo apt-get install -y wget nano apt-transport-https ca-certificates curl software-properties-common git nim
+sudo apt-get install -y wget nano apt-transport-https ca-certificates curl software-properties-common git
 
 # VS Code
 wget -O install.deb https://go.microsoft.com/fwlink/?LinkID=760868 
@@ -63,3 +63,8 @@ unzip android-studio-ide-173.4907809-linux.zip
 mv android-studio installed/
 rm android-studio-ide-173.4907809-linux.zip
 $ ./installed/android-studio/bin/studio.sh &
+
+# java
+wget -O java.tar.gz http://javadl.oracle.com/webapps/download/AutoDL?BundleId=234464_96a7b8442fe848ef90c96a2fad6ed6d1
+sudo tar -C ~/installed -zxvf java.tar.gz
+JAVA_HOME=~/installed/jdk-10.0.2/bin/java
