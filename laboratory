@@ -1,7 +1,0 @@
-#!/usr/bin/env python3
-from subprocess import check_output, call
-
-ip = check_output('ip addr | grep "scope global eth0"', shell=True)
-ip = str(ip).split(" ")[5][:-3]
-
-call(f"python3 -m jupyterlab --NotebookApp.iopub_data_rate_limit=10000000000 --ip={ip}", shell=True)
