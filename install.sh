@@ -5,7 +5,7 @@ mkdir -p ~/installed/customGitConfig/bin ~/installed/bin ~/projects ~/school ~/s
 mv save ~/installed/bin
 mv laboratory ~/installed/bin
 chmod +x ~/installed/bin/save  ~/installed/bin/laboratory
-echo set -gx PATH \$PATH ~/installed/bin >> ~/.config/fish/config.fish
+set -U fish_user_paths ~/installed/bin $fish_user_paths  
 mv ~/UbuntuSetup ~/projects
 cd
 
@@ -35,16 +35,16 @@ rm install.deb
 wget -O miniconda.sh https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash miniconda.sh -b -p $HOME/installed/miniconda
 rm miniconda.sh
-echo set -gx PATH \$PATH ~/installed/miniconda/bin >> ~/.bashrc
+set -U fish_user_paths ~/installed/miniconda/bin $fish_user_paths
 source ~/.bashrc
 python -m pip install mypy spotipy 
-conda install -y flask scikit-learn beautifulsoup4 bokeh jupyterlab matplotlib mpld3 
+conda install -y flask scikit-learn beautifulsoup4 bokeh jupyterlab matplotlib mpld3 sympy 
 
 
 # Golang
 wget -O go.tar.gz https://dl.google.com/go/go1.11.linux-amd64.tar.gz
 sudo tar -C ~/installed -xzf go.tar.gz
-echo set -gx PATH \$PATH ~/installed/go/bin/ >> ~/.bashrc
+set -U fish_user_paths ~/installed/go/bin/ $fish_user_paths
 
 rm go.tar.gz
 
