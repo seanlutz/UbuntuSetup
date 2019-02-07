@@ -38,7 +38,7 @@ rm miniconda.sh
 set -U fish_user_paths ~/installed/miniconda/bin $fish_user_paths
 source ~/.bashrc
 python -m pip install mypy spotipy 
-conda install -y flask scikit-learn beautifulsoup4 bokeh jupyterlab matplotlib mpld3 sympy 
+conda install -y flask pandas scikit-learn beautifulsoup4 bokeh jupyterlab matplotlib mpld3 sympy 
 
 
 # Golang
